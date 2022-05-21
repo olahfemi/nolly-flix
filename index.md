@@ -1,1 +1,1 @@
-[nolly-flix](public/index.html)
+[nolly-flix](dist/index.html)
