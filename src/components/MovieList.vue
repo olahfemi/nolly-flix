@@ -7,7 +7,7 @@
     <h3>All Movies</h3>
     <ul>
       <li v-for="movie in sortedMovies" v-bind:key="movie.title">
-        {{movie.title}}
+        {{movie.title}} - ${{movie.likes * 25}}
 
         <button @click="movie.likes++">Like ({{movie.likes}})</button>
       </li>
@@ -24,7 +24,7 @@ export default {
   data(){
     return {
       movies:[
-        {title: "The Redemption", likes:0},
+        {title: "The Redemption", likes:0,},
         {title: "Africa’s Tech Roots", likes:4},
         {title: "The Invisible Man", likes:2},
         {title: "The Complicated Project", likes:3},
@@ -41,7 +41,9 @@ export default {
       let moviesCopy = [...this.movies]
       return moviesCopy.sort((n1,n2) => n2.likes - n1.likes)
     }
-  }
+  },
+
+
 
 }
 </script>
